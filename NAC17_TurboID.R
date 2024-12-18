@@ -1,6 +1,7 @@
 library(MSstatsConvert)
 library(MSstats)
 library(artMS)
+setwd("C:/Users/livei/Documents/Proteomics_Data_Analysis/ANAC017_PSB-689/totalMQ")
 
 # Read in MaxQuant files
 proteinGroups <- read.delim("proteinGroups.txt", sep="\t", header=TRUE)
@@ -44,7 +45,7 @@ comparison <- rbind(NAC17comp,NAC17_AAcomp,NAC17_mockcomp)
 
 
 colnames(comparison) <- c("NAC17_AA","NAC17_mock","GFP_AA","GFP_mock") # Colnames need to be the same as the conditions in your annotation file
-row.names(comparison) <- c("NAC17","NAC17_AA","NAC17_mock")
+row.names(comparison) <- c("NAC17comp","NAC17_AAcomp","NAC17_mockcomp")
 comparison
 
 # Tests for differentialy abundant proteins:
