@@ -1,7 +1,6 @@
 library(MSstatsConvert)
 library(MSstats)
 library(artMS)
-setwd("C:/Users/livei/Documents/Proteomics_Data_Analysis/ANAC017_PSB-689/totalMQ")
 
 # Read in MaxQuant files
 proteinGroups <- read.delim("proteinGroups.txt", sep="\t", header=TRUE)
